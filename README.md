@@ -1,6 +1,7 @@
 # MKS GEN L V2 Marlin Firmware for Ender 3
 Marlin Firmware for Creality Ender 3 Printers with MKS GEN L V2.0 Board and TMC2209 Stepper Motors
 
+# Content
 The Marlin folder contains a current fork of the Marlin development branch, the changes from the original Ender 3 template and my changes to the files to make them work with the MKS GEN L V2.0 Board and TMC2209 Stepper Motors. If you want to make the changes yourself, see my changes listed below.
 
 # Wiring
