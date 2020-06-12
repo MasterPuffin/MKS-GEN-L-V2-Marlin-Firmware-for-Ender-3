@@ -1,6 +1,8 @@
 # MKS GEN L V2 Marlin Firmware for Ender 3
 Marlin Firmware for Creality Ender 3 Printers with MKS GEN L V2.0 Board and TMC2209 Stepper Motors
 
+The following guide is for use without a BLTouch. For more information about using one, please see [Using a BLTouch](#using_a_bltouch)
+
 # Known issues
 ## :warning: Step miscount when using Octoprint
 There is currently an issue when using Octoprint with the PSU Control plugin / supplying power to the stepper motors after boot. See the corresponding ticket at https://github.com/MarlinFirmware/Marlin/issues/17671.
@@ -70,3 +72,19 @@ and
 `#define HOMING_BUMP_MM      { 5, 5, 2 } `
 
 *Replaces `X_HOME_BUMP_MM`, `Y_HOME_BUMP_MM` and `Z_HOME_BUMP_MM` as Marlin changed the variable name*
+
+# Using a BLTouch
+## Mounting
+Use (this thing)[https://www.thingiverse.com/thing:3003725] from thingiverse, it works great!
+
+## Wiring
+The metioned pins correspond to this [this schematic](https://github.com/makerbase-mks/MKS-GEN_L/blob/master/hardware/MKS%20Gen_L%20V2.0_001/MKS%20Gen_L%20V2.0_001%20PIN.pdf).
+
+The 3 wire plug goes on the D11 pin, orientate it in a way that the yellow cable is on the leftmost pin.
+
+The 2 wire black and white cable goes to the green Z-min header, however unlike the normal endstops, the black cable goes on the middle plug (GND) and the white one on the lowermost one (D18).
+
+## Firmware
+The [BLTouch Branch](https://github.com/MasterPuffin/MKS-GEN-L-V2-Marlin-Firmware-for-Ender-3/tree/BLTouch) contains the modified files and also a file with the [modified startup GCODE](https://github.com/MasterPuffin/MKS-GEN-L-V2-Marlin-Firmware-for-Ender-3/blob/BLTouch/cura_abl_settings.txt) for Cura.
+
+If you want two apply the changes yourself, you can find the differences to the vanilla file [here](https://github.com/MasterPuffin/MKS-GEN-L-V2-Marlin-Firmware-for-Ender-3/compare/BLTouch)
