@@ -21,6 +21,9 @@ Connect the ribbon cable to EXT3 on your display. As you have to plug the put in
 
 Place the cables from the endstops on the top and the bottom pin of each plug, so that the switch is connected to the 5V and D pin in [this schematic](https://github.com/makerbase-mks/MKS-GEN_L/blob/master/hardware/MKS%20Gen_L%20V2.0_001/MKS%20Gen_L%20V2.0_001%20PIN.pdf). You must use either jumper cables or resolder the plugs.
 
+I made some adapter cables so that I could easily undo the changes in the future. In terms of plugs you are looking for JST connectors, 2.5mm XH 3-Pin. This is what my adapter looks like:
+![Adapter](https://github.com/MasterPuffin/MKS-GEN-L-V2-Marlin-Firmware-for-Ender-3/blob/master/adapter_cable.jpg?raw=true)
+
 # Configuration changes
 Make sure you copy first the Ender 3 Config Files (https://github.com/MarlinFirmware/Configurations) and then apply my changes
 
