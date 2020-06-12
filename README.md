@@ -75,7 +75,7 @@ and
 
 # Using a BLTouch
 ## Mounting
-Use (this thing)[https://www.thingiverse.com/thing:3003725] from thingiverse, it works great!
+Use [this thing](https://www.thingiverse.com/thing:3003725) from Thingiverse, it works great!
 
 ## Wiring
 The metioned pins correspond to this [this schematic](https://github.com/makerbase-mks/MKS-GEN_L/blob/master/hardware/MKS%20Gen_L%20V2.0_001/MKS%20Gen_L%20V2.0_001%20PIN.pdf).
