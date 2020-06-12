@@ -1,7 +1,7 @@
 # MKS GEN L V2 Marlin Firmware for Ender 3
 Marlin Firmware for Creality Ender 3 Printers with MKS GEN L V2.0 Board and TMC2209 Stepper Motors
 
-The following guide is for use without a BLTouch. For more information about using one, please see [Using a BLTouch](#using_a_bltouch)
+The following guide is for use without a BLTouch. For more information about using one, please see [Using a BLTouch](#using-a-bltouch)
 
 # Known issues
 ## :warning: Step miscount when using Octoprint
