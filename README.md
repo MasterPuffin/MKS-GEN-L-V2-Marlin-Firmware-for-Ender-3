@@ -71,7 +71,7 @@ and
 ---
 `#define HOMING_BUMP_MM      { 5, 5, 2 } `
 
-*Replaces `X_HOME_BUMP_MM`, `Y_HOME_BUMP_MM` and `Z_HOME_BUMP_MM` as Marlin changed the variable name*
+*Only when using an older config file. Replaces `X_HOME_BUMP_MM`, `Y_HOME_BUMP_MM` and `Z_HOME_BUMP_MM` as Marlin changed the variable name*
 
 # Using a BLTouch
 ## Mounting
@@ -85,6 +85,22 @@ The 3 wire plug goes on the D11 pin, orientate it in a way that the yellow cable
 The 2 wire black and white cable goes to the green Z-min header, however unlike the normal endstops, the black cable goes on the middle plug (GND) and the white one on the lowermost one (D18).
 
 ## Firmware
+Change the following parameters in addition the the changes above
+
+## Configuration.h
+`#define BLTOUCH`
+---
+`#define NOZZLE_TO_PROBE_OFFSET { -41, -10, 0 }`
+---
+`#define PROBING_MARGIN 30`
+---
+`#define AUTO_BED_LEVELING_BILINEAR`
+---
+`#define Z_SAFE_HOMING`
+---
+`#define NUM_SERVOS 1`
+
+
 The [BLTouch Branch](https://github.com/MasterPuffin/MKS-GEN-L-V2-Marlin-Firmware-for-Ender-3/tree/BLTouch) contains the modified files and also a file with the [modified startup GCODE](https://github.com/MasterPuffin/MKS-GEN-L-V2-Marlin-Firmware-for-Ender-3/blob/BLTouch/cura_abl_settings.txt) for Cura.
 
 If you want two apply the changes yourself, you can find the differences to the vanilla file [here](https://github.com/MasterPuffin/MKS-GEN-L-V2-Marlin-Firmware-for-Ender-3/compare/BLTouch)
