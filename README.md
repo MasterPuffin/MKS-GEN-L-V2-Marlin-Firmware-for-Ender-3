@@ -27,7 +27,7 @@ I made some adapter cables so that I could easily undo the changes in the future
 ![Adapter](https://github.com/MasterPuffin/MKS-GEN-L-V2-Marlin-Firmware-for-Ender-3/blob/master/adapter_cable.jpg?raw=true)
 
 # Configuration changes
-Make sure you copy first the Ender 3 Config Files (https://github.com/MarlinFirmware/Configurations) and then apply my changes
+Make sure you copy first the Ender 3 Config Files (https://github.com/MarlinFirmware/Configurations/tree/import-2.0.x/config/examples/Creality/Ender-3/CrealityV1) and then apply my changes
 
 ## Configuration.h
 
