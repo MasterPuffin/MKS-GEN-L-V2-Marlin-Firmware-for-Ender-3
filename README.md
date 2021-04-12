@@ -11,7 +11,8 @@ There is currently an issue when using Octoprint with the PSU Control plugin / s
 Fix: Connect to the printer using [Printrun](https://www.pronterface.com/), [Octoprint](https://octoprint.org/) or similar. Send a M502, followed by an M500 GCODE command via console to the printer the do a factory reset. This will get rid of the error message. Keep in mind that you have to reapply all previous settings such as Z-Offset, if you had any.
 
 # Content
-The Marlin folder contains a current fork of the Marlin branch, the changes from the original Ender 3 template and my changes to the files to make them work with the MKS GEN L V2.0 Board and TMC2209 Stepper Motors. If you want to make the changes yourself, see my changes listed below.
+The Marlin folder contains a current fork of the Marlin branch, the changes from the original Ender 3 template and my changes to the files to make them work with the MKS GEN L V2.0 Board and TMC2209 Stepper Motors. If you want to make the changes yourself, see my changes listed below. 
+
 Please copy the correct configuration file from the config folder (normal or for use with a BLTouch and ABL). There is also file with the [modified startup GCODE](https://github.com/MasterPuffin/MKS-GEN-L-V2-Marlin-Firmware-for-Ender-3/blob/BLTouch/cura_abl_settings.txt) for Cura.
 
 # Wiring
@@ -28,7 +29,7 @@ I made some adapter cables so that I could easily undo the changes in the future
 ![Adapter](https://github.com/MasterPuffin/MKS-GEN-L-V2-Marlin-Firmware-for-Ender-3/blob/master/adapter_cable.jpg?raw=true)
 
 # Configuration changes
-Make sure you copy first the Ender 3 Config Files (https://github.com/MarlinFirmware/Configurations/tree/import-2.0.x/config/examples/Creality/Ender-3/CrealityV1) and then apply my changes
+Make sure you copy the Ender-3 config files first (https://github.com/MarlinFirmware/Configurations/tree/import-2.0.x/config/examples/Creality/Ender-3/CrealityV1) and then apply my changes
 
 ## Configuration.h
 
@@ -88,15 +89,26 @@ The 2 wire black and white cable goes to the green Z-min header, however unlike 
 ## Firmware
 Change the following parameters in addition the the changes above
 
-## Configuration.h
+### Configuration.h 
+
 `#define BLTOUCH`
+
 ---
+
 `#define NOZZLE_TO_PROBE_OFFSET { -41, -10, 0 }`
+
 ---
+
 `#define PROBING_MARGIN 30`
+
 ---
+
 `#define AUTO_BED_LEVELING_BILINEAR`
+
 ---
+
 `#define Z_SAFE_HOMING`
+
 ---
+
 `#define NUM_SERVOS 1`
