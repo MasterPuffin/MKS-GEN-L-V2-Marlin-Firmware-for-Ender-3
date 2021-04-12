@@ -11,7 +11,8 @@ There is currently an issue when using Octoprint with the PSU Control plugin / s
 Fix: Connect to the printer using [Printrun](https://www.pronterface.com/), [Octoprint](https://octoprint.org/) or similar. Send a M502, followed by an M500 GCODE command via console to the printer the do a factory reset. This will get rid of the error message. Keep in mind that you have to reapply all previous settings such as Z-Offset, if you had any.
 
 # Content
-The Marlin folder contains a current fork of the Marlin development branch, the changes from the original Ender 3 template and my changes to the files to make them work with the MKS GEN L V2.0 Board and TMC2209 Stepper Motors. If you want to make the changes yourself, see my changes listed below.
+The Marlin folder contains a current fork of the Marlin branch, the changes from the original Ender 3 template and my changes to the files to make them work with the MKS GEN L V2.0 Board and TMC2209 Stepper Motors. If you want to make the changes yourself, see my changes listed below.
+Please copy the correct configuration file from the config folder (normal or for use with a BLTouch and ABL). There is also file with the [modified startup GCODE](https://github.com/MasterPuffin/MKS-GEN-L-V2-Marlin-Firmware-for-Ender-3/blob/BLTouch/cura_abl_settings.txt) for Cura.
 
 # Wiring
 Use the schematic below to wire up your printer
@@ -99,8 +100,3 @@ Change the following parameters in addition the the changes above
 `#define Z_SAFE_HOMING`
 ---
 `#define NUM_SERVOS 1`
-
-
-The [BLTouch Branch](https://github.com/MasterPuffin/MKS-GEN-L-V2-Marlin-Firmware-for-Ender-3/tree/BLTouch) contains the modified files and also a file with the [modified startup GCODE](https://github.com/MasterPuffin/MKS-GEN-L-V2-Marlin-Firmware-for-Ender-3/blob/BLTouch/cura_abl_settings.txt) for Cura.
-
-If you want two apply the changes yourself, you can find the differences to the vanilla file [here](https://github.com/MasterPuffin/MKS-GEN-L-V2-Marlin-Firmware-for-Ender-3/compare/BLTouch)
