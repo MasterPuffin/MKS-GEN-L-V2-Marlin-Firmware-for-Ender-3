@@ -87,7 +87,7 @@ The 3 wire plug goes on the D11 pin, orientate it in a way that the yellow cable
 The 2 wire black and white cable goes to the green Z-min header, however unlike the normal endstops, the black cable goes on the middle plug (GND) and the white one on the lowermost one (D18).
 
 ## Firmware
-Change the following parameters in addition the the changes above
+Change the following parameters in addition to the changes above
 
 ### Configuration.h 
 
