@@ -78,7 +78,7 @@ and
 Use [this thing](https://www.thingiverse.com/thing:3003725) from Thingiverse, it works great!
 
 ## Wiring
-The metioned pins correspond to this [this schematic](https://github.com/makerbase-mks/MKS-GEN_L/blob/master/hardware/MKS%20Gen_L%20V2.0_001/MKS%20Gen_L%20V2.0_001%20PIN.pdf).
+The metioned pins correspond to [this schematic](https://github.com/makerbase-mks/MKS-GEN_L/blob/master/hardware/MKS%20Gen_L%20V2.0_001/MKS%20Gen_L%20V2.0_001%20PIN.pdf).
 
 The 3 wire plug goes on the D11 pin, orientate it in a way that the yellow cable is on the leftmost pin.
 
