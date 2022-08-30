@@ -8,7 +8,7 @@ The following guide is for use without a BLTouch. For more information about usi
 There is currently an issue when using Octoprint with the PSU Control plugin / supplying power to the stepper motors after boot. See the corresponding ticket at https://github.com/MarlinFirmware/Marlin/issues/17671.
 
 ## "Error EEPROM Ver." Message
-Fix: Connect to the printer using [Printrun](https://www.pronterface.com/), [Octoprint](https://octoprint.org/) or similar. Send a M502, followed by an M500 GCODE command via console to the printer the do a factory reset. This will get rid of the error message. Keep in mind that you have to reapply all previous settings such as Z-Offset, if you had any.
+Fix: Connect to the printer using [Printrun](https://www.pronterface.com/), [Octoprint](https://octoprint.org/) or similar. Send a `M502`, followed by an `M500` GCODE command via console to the printer to do a factory reset. This will get rid of the error message. Keep in mind that you have to reapply all previous settings such as Z-Offset, if you had any.
 
 # Content
 The Marlin folder contains a current fork of the Marlin branch, the changes from the original Ender 3 template and my changes to the files to make them work with the MKS GEN L V2.0 Board and TMC2209 Stepper Motors. If you want to make the changes yourself, see my changes listed below. 
@@ -21,7 +21,7 @@ Use the schematic below to wire up your printer
 
 Place a jumper on the outlined pins to enable UART.
 
-Connect the ribbon cable to EXT3 on your display. As you have to plug the put in reverse, you have to sand down the notch on the outside of the plug.
+Connect the ribbon cable to EXT3 on your display. As you have to plug the plug in reverse, you have to sand down the notch on the outside of the plug.
 
 Place the cables from the endstops on the top and the bottom pin of each plug, so that the switch is connected to the 5V and D pin in [this schematic](https://github.com/makerbase-mks/MKS-GEN_L/blob/master/hardware/MKS%20Gen_L%20V2.0_001/MKS%20Gen_L%20V2.0_001%20PIN.pdf). You must use either jumper cables or resolder the plugs.
 
@@ -37,7 +37,7 @@ Make sure you copy the Ender-3 config files first (https://github.com/MarlinFirm
 and  
 `// #define CUSTOM_STATUS_SCREEN_IMAGE`
 
-*(optional) Removes the custom boot logo and Logo on the status page*
+*(optional) Removes the custom boot logo and logo on the status page*
 
 ---
 `#define MOTHERBOARD BOARD_MKS_GEN_L_V2`
@@ -68,7 +68,7 @@ and
 ## Configuration_adv.h
 `#define E0_AUTO_FAN_PIN 7`
 
-*Sets the correct output for the fan, with will automatically enable when the hotend reaches 50° or more*
+*Sets the correct output for the fan, which will automatically enable when the hotend reaches 50° or more*
 
 ---
 `#define HOMING_BUMP_MM      { 5, 5, 2 } `
